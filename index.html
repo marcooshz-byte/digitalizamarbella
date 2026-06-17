@@ -1,0 +1,1540 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digitaliza Marbella | Servicios digitales para negocios locales</title>
+  <meta name="description" content="Web profesional, menú QR, reseñas Google, SEO local y redes sociales para bares, restaurantes y negocios de Marbella y la Costa del Sol. Consulta gratis.">
+  <meta name="keywords" content="digitalización negocios Marbella, web para restaurantes Marbella, SEO local Marbella, menú QR Marbella, Google My Business Marbella, Costa del Sol">
+  <meta name="author" content="Marcos — digitaliza.marbella">
+  <link rel="canonical" href="https://digitaliza.marbella/">
+  <link rel="icon" type="image/svg+xml" href="../Fotos e Imágenes/logo-digitaliza-marbella-icono.svg">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://digitaliza.marbella/">
+  <meta property="og:title" content="Digitaliza Marbella | Servicios digitales para negocios locales">
+  <meta property="og:description" content="Web, menú QR, reseñas Google, SEO local y redes sociales para bares, restaurantes y negocios de Marbella. Consulta gratuita sin compromiso.">
+  <meta property="og:image" content="https://digitaliza.marbella/Fotos e Imágenes/logo-digitaliza-marbella.png">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="digitaliza.marbella">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@digitalizamarbella">
+  <meta name="twitter:title" content="Digitaliza Marbella | Servicios digitales para negocios locales">
+  <meta name="twitter:description" content="Web, menú QR, reseñas Google, SEO local y redes sociales para negocios de Marbella. Primera consulta gratis.">
+  <meta name="twitter:image" content="https://digitaliza.marbella/Fotos e Imágenes/logo-digitaliza-marbella.png">
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- JSON-LD LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "digitaliza.marbella",
+    "description": "Servicios de digitalización para bares, restaurantes y negocios locales en Marbella y la Costa del Sol. Web profesional, menú QR, SEO local y gestión de redes sociales.",
+    "url": "https://digitaliza.marbella/",
+    "telephone": "",
+    "email": "mhztrabajos@gmail.com",
+    "founder": { "@type": "Person", "name": "Marcos" },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Marbella",
+      "addressRegion": "Málaga",
+      "addressCountry": "ES"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "36.5101",
+      "longitude": "-4.8825"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Marbella" },
+      { "@type": "City", "name": "Estepona" },
+      { "@type": "City", "name": "Mijas" },
+      { "@type": "City", "name": "Fuengirola" }
+    ],
+    "sameAs": ["https://www.instagram.com/digitaliza.marbella"],
+    "priceRange": "€€",
+    "openingHours": "Mo-Fr 09:00-19:00"
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue: #0ea5e9;
+      --blue-dark: #0369a1;
+      --navy: #0a0f1e;
+      --navy-mid: #111827;
+      --purple-dark: #1e1b4b;
+      --orange: #f97316;
+      --orange-dark: #ea580c;
+      --orange-light: rgba(249,115,22,.12);
+      --grad: linear-gradient(135deg, #0ea5e9 0%, #0369a1 45%, #1e1b4b 100%);
+      --grad-card: linear-gradient(145deg, rgba(14,165,233,.08) 0%, rgba(30,27,75,.04) 100%);
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --border: #f1f5f9;
+      --border-dark: rgba(255,255,255,.08);
+      --radius: 14px;
+      --radius-sm: 8px;
+      --shadow-blue: 0 0 0 1px rgba(14,165,233,.35), 0 8px 32px rgba(14,165,233,.12);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Space Grotesk', -apple-system, sans-serif;
+      color: var(--text);
+      background: #fff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ── SCROLLBAR ── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--navy); }
+    ::-webkit-scrollbar-thumb { background: var(--blue-dark); border-radius: 3px; }
+
+    /* ══════════════════════════════
+       NAV
+    ══════════════════════════════ */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 0 6%; height: 64px;
+      display: flex; align-items: center; justify-content: space-between;
+      transition: background .4s ease, box-shadow .4s ease, height .3s ease;
+    }
+    nav.scrolled {
+      background: rgba(10,15,30,.96);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 1px 0 rgba(255,255,255,.06);
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 17px; font-weight: 700; color: #fff;
+      text-decoration: none; letter-spacing: -.02em;
+    }
+    .nav-logo span { color: var(--orange); }
+    .nav-logo-icon { height: 28px; width: auto; display: block; flex-shrink: 0; }
+    .nav-links { display: flex; align-items: center; gap: 6px; list-style: none; }
+    .nav-links a {
+      color: rgba(255,255,255,.75); text-decoration: none;
+      font-size: 14px; font-weight: 500;
+      padding: 6px 12px; border-radius: 6px;
+      transition: color .2s, background .2s;
+    }
+    .nav-links a:hover { color: #fff; background: rgba(255,255,255,.08); }
+    .nav-links a.active { color: #fff; background: rgba(14,165,233,.15); }
+    .nav-cta {
+      background: var(--orange) !important;
+      color: #fff !important;
+      padding: 8px 18px !important;
+      font-weight: 600 !important;
+    }
+    .nav-cta:hover { background: var(--orange-dark) !important; transform: translateY(-1px); }
+
+    /* Burger */
+    .burger { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
+    .burger span {
+      display: block; width: 22px; height: 2px;
+      background: #fff; border-radius: 2px;
+      transition: transform .3s ease, opacity .3s ease, margin .3s ease;
+      margin: 5px 0;
+    }
+    .burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .burger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* Mobile menu */
+    .nav-links.open {
+      display: flex; flex-direction: column; align-items: flex-start;
+      position: fixed; top: 64px; left: 0; right: 0;
+      background: rgba(10,15,30,.98);
+      backdrop-filter: blur(20px);
+      padding: 20px 6% 28px; gap: 4px;
+      border-top: 1px solid rgba(255,255,255,.06);
+      animation: menuSlide .25s ease;
+    }
+    .nav-links.open a { font-size: 16px; width: 100%; padding: 10px 14px; }
+    @keyframes menuSlide {
+      from { opacity: 0; transform: translateY(-8px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ══════════════════════════════
+       HERO
+    ══════════════════════════════ */
+    #hero {
+      min-height: 100vh;
+      background: var(--grad);
+      display: flex; align-items: center;
+      padding: 120px 6% 80px;
+      position: relative; overflow: hidden;
+    }
+
+    /* Grid de puntos decorativo */
+    #hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image:
+        radial-gradient(circle, rgba(255,255,255,.07) 1px, transparent 1px);
+      background-size: 32px 32px;
+      pointer-events: none;
+    }
+    /* Glow orbs */
+    .hero-orb {
+      position: absolute; border-radius: 50%; pointer-events: none;
+      filter: blur(80px);
+    }
+    .hero-orb-1 {
+      width: clamp(300px, 50vw, 600px); height: clamp(300px, 50vw, 600px);
+      background: rgba(249,115,22,.12);
+      top: -15%; right: -10%;
+    }
+    .hero-orb-2 {
+      width: clamp(200px, 35vw, 400px); height: clamp(200px, 35vw, 400px);
+      background: rgba(14,165,233,.1);
+      bottom: -20%; left: -5%;
+    }
+
+    .hero-inner { max-width: 680px; z-index: 1; position: relative; }
+
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 11px; letter-spacing: .12em; font-weight: 600;
+      color: var(--blue);
+      background: rgba(14,165,233,.12);
+      border: 1px solid rgba(14,165,233,.28);
+      padding: 6px 14px; border-radius: 20px; margin-bottom: 28px;
+    }
+    .hero-tag::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: var(--blue);
+      border-radius: 50%;
+      box-shadow: 0 0 0 3px rgba(14,165,233,.25);
+      animation: pulse-dot 2s infinite;
+    }
+    @keyframes pulse-dot {
+      0%, 100% { box-shadow: 0 0 0 3px rgba(14,165,233,.25); }
+      50%       { box-shadow: 0 0 0 6px rgba(14,165,233,.08); }
+    }
+
+    h1 {
+      font-size: clamp(38px, 5.5vw, 66px);
+      font-weight: 700; color: #fff;
+      line-height: 1.06; letter-spacing: -.03em; margin-bottom: 22px;
+    }
+    h1 em { color: var(--orange); font-style: normal; }
+
+    .hero-sub {
+      font-size: clamp(16px, 2vw, 18px);
+      color: rgba(255,255,255,.72); margin-bottom: 38px;
+      font-weight: 300; max-width: 520px; line-height: 1.7;
+    }
+
+    .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 52px; }
+
+    /* Botones */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      font-family: inherit; font-size: 15px; font-weight: 600;
+      padding: 14px 28px; border-radius: var(--radius-sm);
+      text-decoration: none; border: none; cursor: pointer;
+      transition: transform .2s ease, background .2s, box-shadow .2s;
+      position: relative; overflow: hidden;
+    }
+    .btn::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: rgba(255,255,255,.0);
+      transition: background .2s;
+    }
+    .btn:hover::after { background: rgba(255,255,255,.06); }
+    .btn:active { transform: scale(.98) !important; }
+
+    .btn-orange {
+      background: var(--orange); color: #fff;
+      box-shadow: 0 4px 20px rgba(249,115,22,.35);
+    }
+    .btn-orange:hover {
+      background: var(--orange-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(249,115,22,.45);
+    }
+    /* Shimmer effect */
+    .btn-orange::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -80%;
+      width: 60%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.25), transparent);
+      animation: shimmer 3s infinite;
+    }
+    @keyframes shimmer {
+      0%   { left: -80%; }
+      60%, 100% { left: 150%; }
+    }
+
+    .btn-ghost {
+      background: transparent; color: #fff;
+      border: 1px solid rgba(255,255,255,.3);
+    }
+    .btn-ghost:hover {
+      background: rgba(255,255,255,.08);
+      border-color: rgba(255,255,255,.6);
+      transform: translateY(-1px);
+    }
+
+    /* Hero badges */
+    .hero-badges { display: flex; gap: 14px; flex-wrap: wrap; }
+    .badge {
+      display: flex; align-items: center; gap: 12px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.12);
+      backdrop-filter: blur(10px);
+      padding: 10px 16px; border-radius: 12px;
+      transition: background .2s, border-color .2s;
+    }
+    .badge:hover {
+      background: rgba(255,255,255,.1);
+      border-color: rgba(255,255,255,.2);
+    }
+    .badge-ico { font-size: 20px; line-height: 1; }
+    .badge-txt { font-size: 12px; color: rgba(255,255,255,.7); line-height: 1.45; }
+    .badge-txt strong { display: block; color: #fff; font-size: 13px; font-weight: 600; }
+
+    /* Foto decorativa hero */
+    .hero-photo-wrap {
+      position: absolute; right: 6%; top: 50%; transform: translateY(-50%);
+      width: clamp(260px, 28vw, 400px);
+      pointer-events: none; z-index: 1;
+    }
+    .hero-photo-card {
+      border-radius: 20px; overflow: hidden;
+      box-shadow: 0 32px 80px rgba(0,0,0,.45), 0 0 0 1px rgba(255,255,255,.08);
+      position: relative;
+    }
+    .hero-photo-card img {
+      width: 100%; height: auto; display: block;
+      object-fit: cover; aspect-ratio: 3/4;
+      filter: brightness(.9) saturate(1.1);
+    }
+    .hero-photo-card::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, transparent 55%, rgba(10,15,30,.7) 100%);
+    }
+    .hero-photo-badge {
+      position: absolute; bottom: 18px; left: 16px; right: 16px; z-index: 2;
+      background: rgba(255,255,255,.1);
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 10px; padding: 10px 14px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .hero-photo-badge-ico { font-size: 18px; line-height: 1; }
+    .hero-photo-badge-txt { font-size: 12px; color: #fff; font-weight: 500; line-height: 1.4; }
+    .hero-photo-badge-txt span { display: block; color: rgba(255,255,255,.6); font-size: 11px; font-weight: 400; }
+
+    /* Foto "Sobre mí" */
+    .pq-layout { display: grid; grid-template-columns: 1fr 1.6fr; gap: 48px; align-items: start; }
+    .pq-photo-wrap { position: sticky; top: 88px; }
+    .pq-photo {
+      border-radius: 20px; overflow: hidden;
+      box-shadow: 0 16px 48px rgba(14,165,233,.12), 0 0 0 1px #f1f5f9;
+    }
+    .pq-photo img {
+      width: 100%; height: auto; display: block;
+      object-fit: cover; aspect-ratio: 4/5;
+    }
+    .pq-photo-caption {
+      margin-top: 14px; padding: 14px 16px;
+      background: #f8fafc; border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .pq-photo-caption strong { display: block; font-size: 14px; color: var(--text); margin-bottom: 3px; }
+    .pq-photo-caption span { font-size: 13px; color: var(--text-muted); }
+
+    /* Scroll indicator */
+    .scroll-indicator {
+      position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 6px;
+      z-index: 2;
+    }
+    .scroll-indicator span { font-size: 10px; letter-spacing: .1em; color: rgba(255,255,255,.4); font-weight: 500; }
+    .scroll-mouse {
+      width: 22px; height: 34px; border: 2px solid rgba(255,255,255,.25);
+      border-radius: 12px; position: relative;
+    }
+    .scroll-mouse::after {
+      content: '';
+      position: absolute; top: 5px; left: 50%; transform: translateX(-50%);
+      width: 3px; height: 6px; background: rgba(255,255,255,.5);
+      border-radius: 2px;
+      animation: scrollDown 2s ease infinite;
+    }
+    @keyframes scrollDown {
+      0%   { top: 5px; opacity: 1; }
+      80%  { top: 16px; opacity: 0; }
+      100% { top: 5px; opacity: 0; }
+    }
+
+    /* ══════════════════════════════
+       SECCIONES — BASE
+    ══════════════════════════════ */
+    section { padding: clamp(64px, 8vw, 96px) 6%; }
+
+    .s-tag {
+      display: inline-block;
+      font-size: 11px; letter-spacing: .1em; font-weight: 700;
+      color: var(--blue);
+      text-transform: uppercase; margin-bottom: 14px;
+    }
+    h2 {
+      font-size: clamp(28px, 3.5vw, 44px);
+      font-weight: 700; letter-spacing: -.025em; line-height: 1.1; margin-bottom: 18px;
+    }
+    .s-sub {
+      font-size: clamp(15px, 1.6vw, 17px);
+      color: var(--text-muted); max-width: 520px; line-height: 1.7;
+    }
+    .s-head { margin-bottom: 56px; }
+
+    /* ══════════════════════════════
+       SERVICIOS
+    ══════════════════════════════ */
+    #servicios { background: var(--navy); }
+    #servicios .s-tag { color: var(--orange); }
+    #servicios h2 { color: #fff; }
+    #servicios .s-sub { color: rgba(255,255,255,.5); }
+
+    .srv-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+    }
+    .srv-card {
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(255,255,255,.07);
+      border-radius: var(--radius); padding: 28px;
+      position: relative; overflow: hidden;
+      transition: border-color .3s ease, background .3s ease, transform .3s ease, box-shadow .3s ease;
+    }
+    .srv-card::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: var(--grad-card);
+      opacity: 0; transition: opacity .3s;
+    }
+    .srv-card:hover {
+      border-color: rgba(14,165,233,.4);
+      background: rgba(14,165,233,.04);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-blue);
+    }
+    .srv-card:hover::before { opacity: 1; }
+
+    /* Número de orden */
+    .srv-order {
+      position: absolute; top: 20px; right: 22px;
+      font-size: 11px; font-weight: 700; letter-spacing: .06em;
+      color: rgba(255,255,255,.12);
+    }
+    .srv-ico {
+      width: 48px; height: 48px;
+      background: rgba(14,165,233,.12);
+      border: 1px solid rgba(14,165,233,.2);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px; margin-bottom: 18px; position: relative; z-index: 1;
+    }
+    .srv-title {
+      font-size: 17px; font-weight: 600; color: #fff;
+      margin-bottom: 10px; position: relative; z-index: 1;
+    }
+    .srv-desc {
+      font-size: 14px; color: rgba(255,255,255,.5);
+      line-height: 1.7; position: relative; z-index: 1;
+    }
+    .srv-footer {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-top: 18px; position: relative; z-index: 1;
+    }
+    .srv-pill {
+      font-size: 11px; font-weight: 600;
+      color: var(--orange);
+      background: rgba(249,115,22,.12);
+      padding: 3px 10px; border-radius: 20px;
+    }
+    .srv-price {
+      font-size: 12px; color: rgba(255,255,255,.35); font-weight: 500;
+    }
+
+    /* ══════════════════════════════
+       GALERÍA
+    ══════════════════════════════ */
+    #galeria { padding: 0; overflow: hidden; }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      height: clamp(240px, 30vw, 400px);
+    }
+    .gallery-item {
+      position: relative; overflow: hidden; cursor: default;
+    }
+    .gallery-item img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+      transition: transform .7s ease;
+    }
+    .gallery-item:hover img { transform: scale(1.06); }
+    .gallery-item::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(10,15,30,.15) 0%, rgba(10,15,30,.65) 100%);
+      transition: background .4s;
+    }
+    .gallery-item:hover::after {
+      background: linear-gradient(180deg, rgba(10,15,30,.05) 0%, rgba(10,15,30,.5) 100%);
+    }
+    .gallery-label {
+      position: absolute; bottom: 22px; left: 22px; z-index: 2;
+      font-size: 15px; font-weight: 700; color: #fff;
+      letter-spacing: -.01em;
+    }
+    .gallery-label span {
+      display: block; font-size: 12px; font-weight: 400;
+      color: rgba(255,255,255,.65); margin-top: 2px;
+    }
+    @media (max-width: 600px) {
+      .gallery-grid { grid-template-columns: 1fr; height: auto; }
+      .gallery-item { height: 200px; }
+    }
+
+    /* ══════════════════════════════
+       PROCESO
+    ══════════════════════════════ */
+    #proceso { background: #f8fafc; }
+
+    .proc-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      position: relative;
+    }
+
+    /* Línea conectora desktop */
+    .proc-grid::before {
+      content: '';
+      position: absolute;
+      top: 50px; left: 10%; right: 10%; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--blue) 20%, var(--blue-dark) 80%, transparent);
+      opacity: .25; z-index: 0;
+    }
+
+    .proc-step {
+      background: #fff; border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 28px 24px;
+      margin: 0 8px;
+      position: relative; z-index: 1;
+      transition: box-shadow .3s ease, transform .3s ease, border-color .3s;
+    }
+    .proc-step:hover {
+      box-shadow: 0 8px 32px rgba(14,165,233,.1);
+      border-color: rgba(14,165,233,.25);
+      transform: translateY(-2px);
+    }
+    .proc-num {
+      width: 40px; height: 40px;
+      background: var(--grad);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 15px; font-weight: 700; color: #fff; margin-bottom: 18px;
+      box-shadow: 0 4px 12px rgba(14,165,233,.3);
+    }
+    .proc-title { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 10px; }
+    .proc-desc { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
+
+    /* ══════════════════════════════
+       BANNER MARBELLA
+    ══════════════════════════════ */
+    .marbella-banner {
+      position: relative; overflow: hidden;
+      height: clamp(240px, 30vw, 420px);
+    }
+    .marbella-banner img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+      filter: brightness(.5) saturate(1.2);
+      transition: transform 8s ease;
+    }
+    .marbella-banner:hover img { transform: scale(1.04); }
+    .marbella-banner-inner {
+      position: absolute; inset: 0; z-index: 1;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      text-align: center; padding: 0 6%;
+    }
+    .marbella-banner h3 {
+      font-size: clamp(24px, 4vw, 46px); color: #fff;
+      font-weight: 700; letter-spacing: -.025em; line-height: 1.1; margin-bottom: 12px;
+    }
+    .marbella-banner h3 em { color: var(--orange); font-style: normal; }
+    .marbella-banner p {
+      font-size: clamp(14px, 1.5vw, 17px); color: rgba(255,255,255,.7);
+      max-width: 460px; line-height: 1.65; font-weight: 300;
+    }
+
+    /* ══════════════════════════════
+       POR QUÉ YO
+    ══════════════════════════════ */
+    #porque { background: #fff; }
+
+    .pq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .pq-item {
+      display: flex; gap: 20px; padding: 28px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: border-color .25s, box-shadow .25s, transform .25s;
+    }
+    .pq-item:hover {
+      border-color: var(--blue);
+      box-shadow: 0 4px 20px rgba(14,165,233,.08);
+      transform: translateY(-1px);
+    }
+    .pq-num {
+      font-size: 30px; font-weight: 700;
+      color: #f1f5f9; line-height: 1; min-width: 40px;
+      font-variant-numeric: tabular-nums;
+    }
+    .pq-title { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+    .pq-desc { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
+
+    /* ══════════════════════════════
+       REDES SOCIALES
+    ══════════════════════════════ */
+    #redes { background: var(--navy); }
+    #redes .s-tag { color: var(--orange); }
+    #redes h2 { color: #fff; }
+
+    .redes-grid {
+      display: grid; grid-template-columns: 1fr .8fr .8fr;
+      gap: 48px; align-items: center;
+    }
+    .redes-photo {
+      border-radius: 20px; overflow: hidden;
+      box-shadow: 0 24px 64px rgba(0,0,0,.4), 0 0 0 1px rgba(255,255,255,.06);
+    }
+    .redes-photo img {
+      width: 100%; display: block; object-fit: cover;
+      aspect-ratio: 3/4;
+      filter: brightness(.92) saturate(1.1);
+    }
+    .redes-list { list-style: none; display: flex; flex-direction: column; gap: 14px; margin-top: 28px; }
+    .redes-item { display: flex; align-items: flex-start; gap: 14px; }
+    .redes-chk {
+      width: 22px; height: 22px; min-width: 22px;
+      background: rgba(14,165,233,.15);
+      border: 1px solid rgba(14,165,233,.3);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin-top: 3px;
+    }
+    .redes-chk svg { width: 10px; height: 10px; stroke: var(--blue); stroke-width: 2.5; fill: none; }
+    .redes-txt { font-size: 15px; color: rgba(255,255,255,.7); line-height: 1.6; }
+    .redes-txt strong { color: #fff; font-weight: 600; }
+
+    /* Mock phone */
+    .mock-phone {
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 24px; padding: 22px;
+      max-width: 270px; margin: 0 auto;
+      box-shadow: 0 24px 64px rgba(0,0,0,.4);
+    }
+    .mock-head {
+      display: flex; align-items: center; gap: 12px; margin-bottom: 16px;
+      padding-bottom: 14px; border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    .mock-av {
+      width: 44px; height: 44px; background: var(--grad);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px; font-weight: 700; color: #fff;
+    }
+    .mock-name { font-size: 13px; font-weight: 600; color: #fff; }
+    .mock-handle { font-size: 11px; color: rgba(255,255,255,.4); margin-top: 2px; }
+    .mock-posts { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 3px; border-radius: 8px; overflow: hidden; }
+    .mp { aspect-ratio: 1; }
+    .mp1 { background: linear-gradient(135deg,#0ea5e9,#1e1b4b); }
+    .mp2 { background: linear-gradient(135deg,#f97316,#dc2626); }
+    .mp3 { background: linear-gradient(135deg,#0369a1,#0ea5e9); }
+    .mp4 { background: linear-gradient(135deg,#1e1b4b,#4c1d95); }
+    .mp5 { background: linear-gradient(135deg,#065f46,#0ea5e9); }
+    .mp6 { background: linear-gradient(135deg,#f97316,#fbbf24); }
+    .mock-bio { margin-top: 14px; font-size: 12px; color: rgba(255,255,255,.5); line-height: 1.6; }
+    .mock-bio strong { color: #fff; display: block; font-size: 13px; margin-bottom: 3px; }
+
+    /* ══════════════════════════════
+       CONTACTO
+    ══════════════════════════════ */
+    #contacto { background: var(--grad); position: relative; overflow: hidden; }
+    .contacto-bg {
+      position: absolute; inset: 0; z-index: 0; pointer-events: none;
+    }
+    .contacto-bg img {
+      width: 100%; height: 100%; object-fit: cover;
+      opacity: .10; filter: grayscale(20%) saturate(1.2);
+      mix-blend-mode: luminosity;
+    }
+    #contacto > *:not(.contacto-bg) { position: relative; z-index: 1; }
+    #contacto .s-tag { color: rgba(255,255,255,.55); }
+    #contacto h2 { color: #fff; text-align: center; }
+    .cta-sub {
+      font-size: clamp(15px, 1.6vw, 18px);
+      color: rgba(255,255,255,.7); max-width: 480px;
+      margin: 0 auto 48px; line-height: 1.7; font-weight: 300; text-align: center;
+    }
+    .s-head-center { text-align: center; }
+    .s-head-center .s-sub { margin: 0 auto; text-align: center; }
+
+    /* Formulario */
+    .contact-wrap { max-width: 560px; margin: 0 auto; }
+    .contact-form {
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.14);
+      backdrop-filter: blur(20px);
+      border-radius: 20px; padding: clamp(24px, 4vw, 40px);
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .form-group { display: flex; flex-direction: column; gap: 7px; margin-bottom: 14px; }
+    .form-group label { font-size: 13px; font-weight: 600; color: rgba(255,255,255,.75); }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: var(--radius-sm); padding: 12px 14px;
+      font-family: inherit; font-size: 14px; color: #fff;
+      transition: border-color .2s, background .2s;
+      outline: none; resize: none;
+    }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color: rgba(255,255,255,.3); }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: rgba(14,165,233,.6);
+      background: rgba(14,165,233,.06);
+      box-shadow: 0 0 0 3px rgba(14,165,233,.12);
+    }
+    .form-group textarea { min-height: 110px; }
+    .form-group select option { background: var(--navy); color: #fff; }
+    .form-error { font-size: 12px; color: #fca5a5; display: none; }
+    .form-group.has-error input,
+    .form-group.has-error textarea { border-color: rgba(252,165,165,.5); }
+    .form-group.has-error .form-error { display: block; }
+
+    .btn-submit {
+      width: 100%; background: #fff; color: var(--navy);
+      font-size: 15px; font-weight: 700; padding: 15px;
+      border-radius: var(--radius-sm); cursor: pointer;
+      border: none; font-family: inherit;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .btn-submit:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.2); }
+    .btn-submit:active { transform: scale(.98); }
+    .btn-submit:disabled { opacity: .6; cursor: not-allowed; transform: none; }
+
+    .form-success {
+      display: none; text-align: center; padding: 32px 20px;
+    }
+    .form-success .success-ico { font-size: 48px; margin-bottom: 16px; }
+    .form-success h3 { color: #fff; font-size: 20px; margin-bottom: 8px; }
+    .form-success p { color: rgba(255,255,255,.6); font-size: 14px; }
+
+    /* Alternativas de contacto */
+    .cta-alt {
+      display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 24px;
+    }
+    .btn-white { background: #fff; color: var(--navy); font-weight: 600; }
+    .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.2); }
+    .cta-info { margin-top: 32px; display: flex; justify-content: center; gap: 28px; flex-wrap: wrap; }
+    .cta-item { font-size: 13px; color: rgba(255,255,255,.5); display: flex; align-items: center; gap: 6px; }
+    .cta-item a { color: rgba(255,255,255,.8); text-decoration: none; transition: color .2s; }
+    .cta-item a:hover { color: #fff; }
+
+    /* ══════════════════════════════
+       FOOTER
+    ══════════════════════════════ */
+    footer {
+      background: #06090f;
+      padding: 56px 6% 32px;
+      border-top: 1px solid rgba(255,255,255,.04);
+    }
+    .footer-grid {
+      display: grid; grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 48px; margin-bottom: 48px;
+    }
+    .f-logo { font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 14px; }
+    .f-logo span { color: var(--orange); }
+    .f-desc { font-size: 13px; color: rgba(255,255,255,.38); line-height: 1.7; max-width: 240px; margin-bottom: 20px; }
+    .f-social { display: flex; gap: 10px; }
+    .f-social-link {
+      width: 36px; height: 36px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      transition: background .2s, border-color .2s, transform .2s;
+      text-decoration: none;
+    }
+    .f-social-link:hover {
+      background: rgba(249,115,22,.15);
+      border-color: rgba(249,115,22,.3);
+      transform: translateY(-2px);
+    }
+    .f-social-link svg { width: 16px; height: 16px; fill: rgba(255,255,255,.5); transition: fill .2s; }
+    .f-social-link:hover svg { fill: var(--orange); }
+
+    .f-col-title { font-size: 12px; font-weight: 700; letter-spacing: .08em; color: rgba(255,255,255,.35); text-transform: uppercase; margin-bottom: 18px; }
+    .f-col-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .f-col-links a { font-size: 14px; color: rgba(255,255,255,.45); text-decoration: none; transition: color .2s; }
+    .f-col-links a:hover { color: #fff; }
+    .f-contact-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; }
+    .f-contact-ico { font-size: 15px; line-height: 1.4; }
+    .f-contact-txt { font-size: 13px; color: rgba(255,255,255,.4); line-height: 1.6; }
+    .f-contact-txt a { color: rgba(255,255,255,.65); text-decoration: none; transition: color .2s; }
+    .f-contact-txt a:hover { color: #fff; }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.06);
+      padding-top: 24px;
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+    }
+    .f-copy { font-size: 12px; color: rgba(255,255,255,.2); }
+
+    /* ══════════════════════════════
+       FADE IN
+    ══════════════════════════════ */
+    .fi { opacity: 0; transform: translateY(24px); transition: opacity .65s ease, transform .65s ease; }
+    .fi.on { opacity: 1; transform: none; }
+
+    /* Stagger para grids */
+    .fi[data-delay="1"] { transition-delay: .1s; }
+    .fi[data-delay="2"] { transition-delay: .2s; }
+    .fi[data-delay="3"] { transition-delay: .3s; }
+    .fi[data-delay="4"] { transition-delay: .4s; }
+    .fi[data-delay="5"] { transition-delay: .5s; }
+    .fi[data-delay="6"] { transition-delay: .6s; }
+
+    /* ══════════════════════════════
+       MOBILE
+    ══════════════════════════════ */
+    @media (max-width: 900px) {
+      .proc-grid { grid-template-columns: 1fr 1fr; }
+      .proc-grid::before { display: none; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      section { padding: 64px 5%; }
+      .nav-links { display: none; }
+      .burger { display: block; }
+      h1 { font-size: clamp(32px, 9vw, 44px); }
+      .hero-photo-wrap { display: none; }
+      .srv-grid, .pq-grid { grid-template-columns: 1fr; }
+      .pq-layout { grid-template-columns: 1fr; }
+      .pq-photo-wrap { position: static; }
+      .redes-grid { grid-template-columns: 1fr; gap: 36px; }
+      .redes-photo { display: none; }
+      .mock-phone { max-width: 240px; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 36px; }
+      .proc-grid { grid-template-columns: 1fr; gap: 0; }
+      .proc-grid::before { display: none; }
+      .proc-step { margin: 0; border-radius: 0; border-bottom: none; }
+      .proc-step:first-child { border-radius: var(--radius) var(--radius) 0 0; }
+      .proc-step:last-child { border-radius: 0 0 var(--radius) var(--radius); border-bottom: 1px solid var(--border); }
+      /* Línea vertical en móvil */
+      .proc-step { position: relative; padding-left: 64px; }
+      .proc-step:not(:last-child)::after {
+        content: '';
+        position: absolute; left: 39px; bottom: -1px; top: 70px;
+        width: 1px; background: rgba(14,165,233,.2); z-index: 2;
+      }
+      .proc-num { position: absolute; left: 20px; top: 28px; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-btns { flex-direction: column; }
+      .hero-btns .btn { width: 100%; text-align: center; }
+      .hero-badges { flex-direction: column; gap: 10px; }
+      .cta-alt { flex-direction: column; }
+      .cta-alt .btn { width: 100%; justify-content: center; }
+    }
+
+    /* ══════════════════════════════
+       ACCESIBILIDAD
+    ══════════════════════════════ */
+    :focus-visible {
+      outline: 2px solid var(--blue);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+      .fi { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav" role="navigation" aria-label="Navegación principal">
+  <a href="#" class="nav-logo" aria-label="Digitaliza Marbella — inicio">
+    <svg class="nav-logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+      <rect x="29" y="12" width="11" height="11" rx="3" fill="#38bdf8"/>
+      <rect x="45" y="12" width="11" height="11" rx="3" fill="#38bdf8"/>
+      <rect x="29" y="28" width="11" height="11" rx="3" fill="#7dd3fc"/>
+      <rect x="61" y="28" width="11" height="11" rx="3" fill="#7dd3fc"/>
+      <rect x="29" y="44" width="11" height="11" rx="3" fill="#bae6fd"/>
+      <rect x="61" y="44" width="11" height="11" rx="3" fill="#f97316"/>
+      <rect x="29" y="60" width="11" height="11" rx="3" fill="#7dd3fc"/>
+      <rect x="61" y="60" width="11" height="11" rx="3" fill="#7dd3fc"/>
+      <rect x="29" y="76" width="11" height="11" rx="3" fill="#38bdf8"/>
+      <rect x="45" y="76" width="11" height="11" rx="3" fill="#38bdf8"/>
+    </svg>
+    digitaliza<span>.marbella</span>
+  </a>
+  <ul class="nav-links" id="navLinks" role="menubar">
+    <li role="none"><a href="#servicios" role="menuitem">Servicios</a></li>
+    <li role="none"><a href="#proceso" role="menuitem">Cómo funciona</a></li>
+    <li role="none"><a href="#porque" role="menuitem">Sobre mí</a></li>
+    <li role="none"><a href="#redes" role="menuitem">Redes sociales</a></li>
+    <li role="none"><a href="#contacto" class="nav-cta" role="menuitem">Contacto</a></li>
+  </ul>
+  <button class="burger" id="burger" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="navLinks">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section id="hero" aria-labelledby="hero-title">
+  <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+  <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div class="hero-tag" aria-label="Área de servicio: Marbella, Costa del Sol">MARBELLA · COSTA DEL SOL</div>
+    <h1 id="hero-title">Haz que tu negocio<br><em>domine en Google</em></h1>
+    <p class="hero-sub">Web, menú QR, reseñas Google, SEO local y redes sociales para bares, restaurantes y negocios de Marbella.</p>
+    <div class="hero-btns">
+      <a href="#contacto" class="btn btn-orange">Empezar ahora →</a>
+      <a href="#servicios" class="btn btn-ghost">Ver servicios</a>
+    </div>
+    <div class="hero-badges">
+      <div class="badge">
+        <div class="badge-ico" aria-hidden="true">🎯</div>
+        <div class="badge-txt"><strong>100% local</strong>Basado en Marbella</div>
+      </div>
+      <div class="badge">
+        <div class="badge-ico" aria-hidden="true">⚡</div>
+        <div class="badge-txt"><strong>Entrega rápida</strong>Web en 7 días</div>
+      </div>
+      <div class="badge">
+        <div class="badge-ico" aria-hidden="true">💬</div>
+        <div class="badge-txt"><strong>Consulta gratis</strong>Sin compromiso</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-photo-wrap" aria-hidden="true">
+    <div class="hero-photo-card">
+      <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=640&q=85&auto=format&fit=crop"
+           alt=""
+           loading="eager"
+           decoding="async"
+           width="640">
+      <div class="hero-photo-badge">
+        <div class="hero-photo-badge-ico">⭐</div>
+        <div class="hero-photo-badge-txt">
+          4.9 en Google Maps
+          <span>+120 reseñas conseguidas</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-indicator" aria-hidden="true">
+    <span>SCROLL</span>
+    <div class="scroll-mouse"></div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios" aria-labelledby="servicios-title">
+  <div class="s-head">
+    <div class="s-tag fi">Servicios</div>
+    <h2 class="fi" id="servicios-title">Todo lo que necesita<br>tu negocio para crecer</h2>
+    <p class="s-sub fi">Cada servicio está pensado para hostelería y comercio local en Marbella y la Costa del Sol.</p>
+  </div>
+  <div class="srv-grid">
+
+    <article class="srv-card fi" data-delay="1">
+      <span class="srv-order" aria-hidden="true">01</span>
+      <div class="srv-ico" aria-hidden="true">🌐</div>
+      <div class="srv-title">Página web profesional</div>
+      <div class="srv-desc">Tu negocio visible las 24 horas. Diseño a medida, adaptado a móvil, rápida y optimizada para Google. Sin plantillas genéricas.</div>
+      <div class="srv-footer">
+        <span class="srv-pill">Más visibilidad</span>
+        <span class="srv-price">Desde 299 €</span>
+      </div>
+    </article>
+
+    <article class="srv-card fi" data-delay="2">
+      <span class="srv-order" aria-hidden="true">02</span>
+      <div class="srv-ico" aria-hidden="true">📲</div>
+      <div class="srv-title">Menú QR digital</div>
+      <div class="srv-desc">El cliente escanea con el móvil y ve tu carta al instante. Sin papel, sin impresiones, sin esperas. Actualizable en segundos.</div>
+      <div class="srv-footer">
+        <span class="srv-pill">Sin papel</span>
+        <span class="srv-price">Desde 99 €</span>
+      </div>
+    </article>
+
+    <article class="srv-card fi" data-delay="3">
+      <span class="srv-order" aria-hidden="true">03</span>
+      <div class="srv-ico" aria-hidden="true">⭐</div>
+      <div class="srv-title">Gestión de reseñas</div>
+      <div class="srv-desc">El 88 % de los clientes leen reseñas antes de entrar. Te ayudo a conseguir más estrellas de forma natural y constante en Google.</div>
+      <div class="srv-footer">
+        <span class="srv-pill">Más confianza</span>
+        <span class="srv-price">Mensual</span>
+      </div>
+    </article>
+
+    <article class="srv-card fi" data-delay="4">
+      <span class="srv-order" aria-hidden="true">04</span>
+      <div class="srv-ico" aria-hidden="true">📍</div>
+      <div class="srv-title">SEO local</div>
+      <div class="srv-desc">Aparece primero cuando alguien busca "restaurante en Marbella". Optimización completa de Google My Business y posicionamiento local.</div>
+      <div class="srv-footer">
+        <span class="srv-pill">Google Maps</span>
+        <span class="srv-price">Mensual</span>
+      </div>
+    </article>
+
+    <article class="srv-card fi" data-delay="5">
+      <span class="srv-order" aria-hidden="true">05</span>
+      <div class="srv-ico" aria-hidden="true">📣</div>
+      <div class="srv-title">Gestión de redes sociales</div>
+      <div class="srv-desc">Diseño de posts con Canva, estrategia de contenidos y calendario editorial. Instagram y Facebook con tu imagen de marca.</div>
+      <div class="srv-footer">
+        <span class="srv-pill">Más seguidores</span>
+        <span class="srv-price">Mensual</span>
+      </div>
+    </article>
+
+    <article class="srv-card fi" data-delay="6">
+      <span class="srv-order" aria-hidden="true">06</span>
+      <div class="srv-ico" aria-hidden="true">🗓️</div>
+      <div class="srv-title">Sistema de reservas online</div>
+      <div class="srv-desc">Reservas integradas en tu web. El cliente reserva en 2 minutos y tú recibes la notificación al móvil. Menos no-shows, más control.</div>
+      <div class="srv-footer">
+        <span class="srv-pill">Más reservas</span>
+        <span class="srv-price">Desde 149 €</span>
+      </div>
+    </article>
+
+    <article class="srv-card fi" data-delay="1">
+      <span class="srv-order" aria-hidden="true">07</span>
+      <div class="srv-ico" aria-hidden="true">📊</div>
+      <div class="srv-title">Ficheros de clientes automatizados</div>
+      <div class="srv-desc">Cada vez que alguien contacta, reserva o pide información, sus datos se guardan automáticamente en una hoja de Google Sheets. Sin teclear nada tú: tienes el histórico completo de clientes ordenado y listo para consultar en cualquier momento desde el móvil.</div>
+      <div class="srv-footer">
+        <span class="srv-pill">Google Sheets</span>
+        <span class="srv-price">Incluido en web</span>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- GALERÍA -->
+<section id="galeria" aria-label="Tipos de negocios que digitalizamos en Marbella">
+  <div class="gallery-grid">
+    <div class="gallery-item">
+      <img
+        src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=900&q=85&auto=format&fit=crop"
+        alt="Terraza de restaurante con ambiente mediterráneo en la Costa del Sol"
+        loading="lazy" decoding="async" width="900">
+      <div class="gallery-label">Restaurantes<span>Terrazas y comedores</span></div>
+    </div>
+    <div class="gallery-item">
+      <img
+        src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=900&q=85&auto=format&fit=crop"
+        alt="Interior de bar con barra de cócteles iluminada"
+        loading="lazy" decoding="async" width="900">
+      <div class="gallery-label">Bares y pubs<span>Coctelería y hostelería</span></div>
+    </div>
+    <div class="gallery-item">
+      <img
+        src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?w=900&q=85&auto=format&fit=crop"
+        alt="Cafetería con ambiente acogedor y pastelería artesanal"
+        loading="lazy" decoding="async" width="900">
+      <div class="gallery-label">Cafeterías y comercio<span>Tiendas y negocios locales</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CÓMO FUNCIONA -->
+<section id="proceso" aria-labelledby="proceso-title">
+  <div class="s-head">
+    <div class="s-tag fi">Proceso</div>
+    <h2 class="fi" id="proceso-title">Así de sencillo<br>es empezar</h2>
+    <p class="s-sub fi">Sin burocracia ni contratos eternos. En menos de dos semanas tu negocio está en marcha.</p>
+  </div>
+  <div class="proc-grid" role="list">
+    <div class="proc-step fi" role="listitem">
+      <div class="proc-num" aria-hidden="true">1</div>
+      <div class="proc-title">Hablamos</div>
+      <div class="proc-desc">Me cuentas qué tiene tu negocio y qué quieres mejorar. Primera consulta gratuita, sin compromiso. Por email o DM de Instagram.</div>
+    </div>
+    <div class="proc-step fi" role="listitem">
+      <div class="proc-num" aria-hidden="true">2</div>
+      <div class="proc-title">Diseñamos juntos</div>
+      <div class="proc-desc">Te preparo una propuesta a medida con lo que más te conviene. Tú decides qué incluyes y cuánto inviertes, sin sorpresas.</div>
+    </div>
+    <div class="proc-step fi" role="listitem">
+      <div class="proc-num" aria-hidden="true">3</div>
+      <div class="proc-title">Tu negocio, online</div>
+      <div class="proc-desc">En menos de 7 días tu web está publicada, tu menú QR funcionando y tu ficha de Google actualizada y optimizada.</div>
+    </div>
+    <div class="proc-step fi" role="listitem">
+      <div class="proc-num" aria-hidden="true">4</div>
+      <div class="proc-title">Seguimiento</div>
+      <div class="proc-desc">No desaparezco. Soporte continuo y actualizaciones para que siempre estés al día y sigas creciendo mes a mes.</div>
+    </div>
+  </div>
+</section>
+
+<!-- BANNER MARBELLA -->
+<div class="marbella-banner" role="img" aria-label="Vista de Marbella y la Costa del Sol">
+  <img
+    src="https://images.unsplash.com/photo-1499678329028-101435549a4e?w=1800&q=85&auto=format&fit=crop"
+    alt=""
+    loading="lazy" decoding="async" width="1800">
+  <div class="marbella-banner-inner">
+    <h3>Tu negocio en Marbella,<br><em>visible para el mundo</em></h3>
+    <p>Más de 11 millones de turistas visitan la Costa del Sol cada año. ¿Te encuentran a ti?</p>
+  </div>
+</div>
+
+<!-- POR QUÉ YO -->
+<section id="porque" aria-labelledby="porque-title">
+  <div class="s-head">
+    <div class="s-tag fi">Por qué digitaliza.marbella</div>
+    <h2 class="fi" id="porque-title">No soy una agencia.<br>Soy Marcos.</h2>
+    <p class="s-sub fi">Trabajo de forma directa con cada cliente. Sin intermediarios, sin comerciales, sin sorpresas en la factura.</p>
+  </div>
+  <div class="pq-layout">
+    <div class="pq-photo-wrap fi">
+      <div class="pq-photo">
+        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=85&auto=format&fit=crop"
+             alt="Marcos trabajando en estrategia digital para negocios locales"
+             loading="lazy"
+             decoding="async"
+             width="600">
+      </div>
+      <div class="pq-photo-caption">
+        <strong>Marcos — digitaliza.marbella</strong>
+        <span>Especialista en presencia digital para hostelería y comercio local en la Costa del Sol</span>
+      </div>
+    </div>
+
+    <div class="pq-grid">
+      <div class="pq-item fi">
+        <div class="pq-num" aria-hidden="true">01</div>
+        <div>
+          <div class="pq-title">Solo trabajo con negocios locales</div>
+          <div class="pq-desc">No soy una agencia que trata tu negocio como un número más. Me implico de forma directa y personal en cada proyecto.</div>
+        </div>
+      </div>
+      <div class="pq-item fi">
+        <div class="pq-num" aria-hidden="true">02</div>
+        <div>
+          <div class="pq-title">Conozco Marbella de verdad</div>
+          <div class="pq-desc">Sé cómo funciona el mercado local, la temporada alta y el perfil del cliente que viene a la Costa del Sol.</div>
+        </div>
+      </div>
+      <div class="pq-item fi">
+        <div class="pq-num" aria-hidden="true">03</div>
+        <div>
+          <div class="pq-title">Todo en un solo lugar</div>
+          <div class="pq-desc">Web, redes, Google, reservas… todo conmigo. Sin coordinar a tres proveedores ni explicar lo mismo dos veces.</div>
+        </div>
+      </div>
+      <div class="pq-item fi">
+        <div class="pq-num" aria-hidden="true">04</div>
+        <div>
+          <div class="pq-title">Resultados visibles, no humo</div>
+          <div class="pq-desc">Antes de empezar hablamos de qué necesitas realmente. Solo te propongo lo que tiene sentido para tu negocio.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REDES SOCIALES -->
+<section id="redes" aria-labelledby="redes-title">
+  <div class="redes-grid">
+    <div>
+      <div class="s-tag fi">Redes sociales</div>
+      <h2 class="fi" id="redes-title" style="color:#fff">Presencia digital<br>que atrae clientes</h2>
+      <ul class="redes-list" aria-label="Qué incluye la gestión de redes sociales">
+        <li class="redes-item fi">
+          <div class="redes-chk" aria-hidden="true">
+            <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
+          </div>
+          <div class="redes-txt"><strong>Diseño de posts con Canva</strong> — publicaciones con tu imagen de marca, listas para subir</div>
+        </li>
+        <li class="redes-item fi">
+          <div class="redes-chk" aria-hidden="true">
+            <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
+          </div>
+          <div class="redes-txt"><strong>Estrategia de contenidos</strong> — qué publicar, cuándo y con qué objetivo</div>
+        </li>
+        <li class="redes-item fi">
+          <div class="redes-chk" aria-hidden="true">
+            <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
+          </div>
+          <div class="redes-txt"><strong>Instagram y Facebook</strong> — enfocado en llegar a clientes de la zona</div>
+        </li>
+        <li class="redes-item fi">
+          <div class="redes-chk" aria-hidden="true">
+            <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
+          </div>
+          <div class="redes-txt"><strong>Resultados reales</strong> — más seguidores, más interacción y más reservas</div>
+        </li>
+      </ul>
+    </div>
+    <div class="redes-photo fi">
+      <img
+        src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=600&q=85&auto=format&fit=crop"
+        alt="Persona gestionando las redes sociales de su negocio desde el móvil"
+        loading="lazy" decoding="async" width="600">
+    </div>
+    <div class="fi">
+      <div class="mock-phone" role="img" aria-label="Ejemplo de perfil de Instagram para un negocio de Marbella">
+        <div class="mock-head">
+          <div class="mock-av" aria-hidden="true">D</div>
+          <div>
+            <div class="mock-name">Tu negocio</div>
+            <div class="mock-handle">@tunegocio.marbella</div>
+          </div>
+        </div>
+        <div class="mock-posts" aria-hidden="true">
+          <div class="mp mp1"></div><div class="mp mp2"></div><div class="mp mp3"></div>
+          <div class="mp mp4"></div><div class="mp mp5"></div><div class="mp mp6"></div>
+        </div>
+        <div class="mock-bio" aria-hidden="true">
+          <strong>Tu negocio en Marbella 🌊</strong>
+          Abierto todos los días · Reservas online<br>
+          📍 Marbella, Costa del Sol
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BANNER NOCHE -->
+<div class="marbella-banner" role="img" aria-label="Negocio de hostelería con ambiente nocturno en Marbella">
+  <img
+    src="https://images.unsplash.com/photo-1551218808-94e220e084d2?w=1800&q=85&auto=format&fit=crop"
+    alt=""
+    loading="lazy" decoding="async" width="1800">
+  <div class="marbella-banner-inner">
+    <h3>Primera consulta <em>gratuita</em><br>y sin compromiso</h3>
+    <p>Cuéntame qué tiene tu negocio y te digo exactamente qué podemos hacer juntos.</p>
+  </div>
+</div>
+
+<!-- CONTACTO -->
+<section id="contacto" aria-labelledby="contacto-title">
+  <div class="contacto-bg" aria-hidden="true">
+    <img
+      src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=80&auto=format&fit=crop"
+      alt=""
+      loading="lazy" decoding="async" width="1800">
+  </div>
+  <div class="s-head s-head-center">
+    <div class="s-tag fi">Contacto</div>
+    <h2 class="fi" id="contacto-title">¿Listo para digitalizar<br>tu negocio?</h2>
+    <p class="cta-sub fi">Cuéntame qué tienes y te digo qué podemos hacer juntos. Primera consulta gratuita, sin compromiso.</p>
+  </div>
+
+  <div class="contact-wrap">
+    <div class="contact-form fi" id="contactForm">
+      <form id="form" novalidate aria-label="Formulario de contacto">
+        <div class="form-row">
+          <div class="form-group" id="grp-nombre">
+            <label for="nombre">Tu nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ej. Antonio García" autocomplete="name" required>
+            <span class="form-error" role="alert">Por favor, escribe tu nombre.</span>
+          </div>
+          <div class="form-group" id="grp-email">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" placeholder="tu@email.com" autocomplete="email" required>
+            <span class="form-error" role="alert">Introduce un email válido.</span>
+          </div>
+        </div>
+        <div class="form-group" id="grp-negocio">
+          <label for="negocio">Tipo de negocio</label>
+          <select id="negocio" name="negocio" required>
+            <option value="" disabled selected>Selecciona tu tipo de negocio</option>
+            <option value="bar">Bar / Pub</option>
+            <option value="restaurante">Restaurante</option>
+            <option value="cafeteria">Cafetería / Pastelería</option>
+            <option value="hotel">Hotel / Hostal</option>
+            <option value="tienda">Tienda / Comercio</option>
+            <option value="otro">Otro tipo de negocio</option>
+          </select>
+          <span class="form-error" role="alert">Selecciona el tipo de negocio.</span>
+        </div>
+        <div class="form-group" id="grp-mensaje">
+          <label for="mensaje">¿Qué necesitas?</label>
+          <textarea id="mensaje" name="mensaje" placeholder="Cuéntame qué tiene tu negocio ahora y qué te gustaría mejorar..." required></textarea>
+          <span class="form-error" role="alert">Escribe un mensaje de al menos 10 caracteres.</span>
+        </div>
+        <button type="submit" class="btn-submit" id="btnSubmit">
+          Enviar mensaje →
+        </button>
+      </form>
+
+      <div class="form-success" id="formSuccess" role="status" aria-live="polite">
+        <div class="success-ico" aria-hidden="true">✅</div>
+        <h3>¡Mensaje enviado!</h3>
+        <p>Gracias por contactarme. Te respondo en menos de 24 horas.</p>
+      </div>
+    </div>
+
+    <div class="cta-alt fi">
+      <a href="mailto:mhztrabajos@gmail.com?subject=Quiero%20digitalizar%20mi%20negocio&body=Hola%20Marcos%2C%0A%0ATe%20escribo%20porque%20me%20gustar%C3%ADa%20hablar%20sobre%20digitalizar%20mi%20negocio.%0A%0AMi%20nombre%20es%3A%20%0ATipo%20de%20negocio%3A%20%0ALo%20que%20necesito%3A%20" class="btn btn-white">
+        Envíame un email →
+      </a>
+      <a href="https://instagram.com/digitaliza.marbella" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">
+        DM en Instagram
+      </a>
+    </div>
+
+    <div class="cta-info fi">
+      <span class="cta-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <a href="mailto:mhztrabajos@gmail.com">mhztrabajos@gmail.com</a>
+      </span>
+      <span class="cta-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        <a href="https://instagram.com/digitaliza.marbella" target="_blank" rel="noopener noreferrer">@digitaliza.marbella</a>
+      </span>
+      <span class="cta-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Marbella, Costa del Sol
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+  <div class="footer-grid">
+    <div>
+      <div class="f-logo">
+        <svg viewBox="0 0 480 168" xmlns="http://www.w3.org/2000/svg" style="height:52px;width:auto;display:block;margin-bottom:14px" aria-label="digitaliza.marbella" role="img">
+          <rect x="0"  y="18" width="20" height="20" rx="4" fill="#38bdf8"/>
+          <rect x="28" y="18" width="20" height="20" rx="4" fill="#38bdf8"/>
+          <rect x="0"  y="46" width="20" height="20" rx="4" fill="#7dd3fc"/>
+          <rect x="56" y="46" width="20" height="20" rx="4" fill="#7dd3fc"/>
+          <rect x="0"  y="74" width="20" height="20" rx="4" fill="#bae6fd"/>
+          <rect x="56" y="74" width="20" height="20" rx="4" fill="#f97316"/>
+          <rect x="0"  y="102" width="20" height="20" rx="4" fill="#7dd3fc"/>
+          <rect x="56" y="102" width="20" height="20" rx="4" fill="#7dd3fc"/>
+          <rect x="0"  y="130" width="20" height="20" rx="4" fill="#38bdf8"/>
+          <rect x="28" y="130" width="20" height="20" rx="4" fill="#38bdf8"/>
+          <text x="104" y="86" font-family="'Space Grotesk', -apple-system, sans-serif" font-size="52" font-weight="700" fill="#ffffff">digitaliza</text>
+          <text x="104" y="128" font-family="'Space Grotesk', -apple-system, sans-serif" font-size="36" font-weight="400" fill="rgba(255,255,255,0.45)"><tspan fill="#38bdf8">.</tspan>marbella</text>
+        </svg>
+      </div>
+      <p class="f-desc">Servicios digitales para bares, restaurantes y negocios locales de Marbella y la Costa del Sol. Web, SEO local, redes sociales y más.</p>
+      <div class="f-social">
+        <a href="https://instagram.com/digitaliza.marbella" class="f-social-link" target="_blank" rel="noopener noreferrer" aria-label="Síguenos en Instagram">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="mailto:mhztrabajos@gmail.com" class="f-social-link" aria-label="Envíanos un email">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <div class="f-col-title">Navegación</div>
+      <ul class="f-col-links">
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#proceso">Cómo funciona</a></li>
+        <li><a href="#porque">Sobre mí</a></li>
+        <li><a href="#redes">Redes sociales</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="f-col-title">Contacto</div>
+      <div class="f-contact-item">
+        <span class="f-contact-ico" aria-hidden="true">📧</span>
+        <div class="f-contact-txt">
+          <a href="mailto:mhztrabajos@gmail.com">mhztrabajos@gmail.com</a>
+        </div>
+      </div>
+      <div class="f-contact-item">
+        <span class="f-contact-ico" aria-hidden="true">📱</span>
+        <div class="f-contact-txt">
+          <a href="https://instagram.com/digitaliza.marbella" target="_blank" rel="noopener noreferrer">@digitaliza.marbella</a>
+        </div>
+      </div>
+      <div class="f-contact-item">
+        <span class="f-contact-ico" aria-hidden="true">📍</span>
+        <div class="f-contact-txt">Marbella, Costa del Sol<br>Málaga, España</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="f-copy">© 2026 digitaliza.marbella · Todos los derechos reservados</div>
+    <div class="f-copy">Hecho con cariño en Marbella ☀️</div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ── Nav scroll + active links ── */
+  const nav = document.getElementById('nav');
+  const sections = document.querySelectorAll('section[id]');
+  const navLinkEls = document.querySelectorAll('.nav-links a[href^="#"]');
+
+  function updateNav() {
+    nav.classList.toggle('scrolled', scrollY > 40);
+
+    let current = '';
+    sections.forEach(sec => {
+      if (scrollY >= sec.offsetTop - 120) current = sec.id;
+    });
+    navLinkEls.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    });
+  }
+  window.addEventListener('scroll', updateNav, { passive: true });
+  updateNav();
+
+  /* ── Burger menu ── */
+  const burger = document.getElementById('burger');
+  const navLinks = document.getElementById('navLinks');
+
+  burger.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    burger.classList.toggle('open', isOpen);
+    burger.setAttribute('aria-expanded', isOpen);
+  });
+
+  navLinks.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      burger.classList.remove('open');
+      burger.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  /* ── Fade in con IntersectionObserver ── */
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('on');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.fi').forEach(el => io.observe(el));
+
+  /* ── Formulario de contacto ── */
+  const form = document.getElementById('form');
+  const formSuccess = document.getElementById('formSuccess');
+  const btnSubmit = document.getElementById('btnSubmit');
+
+  function validate() {
+    let valid = true;
+
+    const fields = [
+      { id: 'nombre', grp: 'grp-nombre', check: v => v.trim().length >= 2 },
+      { id: 'email',  grp: 'grp-email',  check: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) },
+      { id: 'negocio',grp: 'grp-negocio',check: v => v !== '' },
+      { id: 'mensaje',grp: 'grp-mensaje',check: v => v.trim().length >= 10 },
+    ];
+
+    fields.forEach(({ id, grp, check }) => {
+      const el = document.getElementById(id);
+      const grpEl = document.getElementById(grp);
+      const ok = check(el.value);
+      grpEl.classList.toggle('has-error', !ok);
+      if (!ok) valid = false;
+    });
+
+    return valid;
+  }
+
+  /* Limpia errores en tiempo real */
+  ['nombre','email','negocio','mensaje'].forEach(id => {
+    document.getElementById(id).addEventListener('input', () => {
+      document.getElementById('grp-' + id).classList.remove('has-error');
+    });
+  });
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    if (!validate()) return;
+
+    btnSubmit.disabled = true;
+    btnSubmit.textContent = 'Enviando…';
+
+    const nombre  = document.getElementById('nombre').value.trim();
+    const email   = document.getElementById('email').value.trim();
+    const negocio = document.getElementById('negocio').value;
+    const mensaje = document.getElementById('mensaje').value.trim();
+
+    const subject = encodeURIComponent('Consulta desde digitaliza.marbella — ' + nombre);
+    const body = encodeURIComponent(
+      'Nombre: ' + nombre + '\n' +
+      'Email: ' + email + '\n' +
+      'Tipo de negocio: ' + negocio + '\n\n' +
+      'Mensaje:\n' + mensaje
+    );
+
+    window.location.href = 'mailto:mhztrabajos@gmail.com?subject=' + subject + '&body=' + body;
+
+    setTimeout(() => {
+      form.style.display = 'none';
+      formSuccess.style.display = 'block';
+    }, 600);
+  });
+
+})();
+</script>
+</body>
+</html>
