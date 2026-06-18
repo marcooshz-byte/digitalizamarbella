@@ -7,15 +7,15 @@
   <meta name="description" content="Web profesional, menú QR, reseñas Google, SEO local y redes sociales para bares, restaurantes y negocios de Marbella y la Costa del Sol. Consulta gratis.">
   <meta name="keywords" content="digitalización negocios Marbella, web para restaurantes Marbella, SEO local Marbella, menú QR Marbella, Google My Business Marbella, Costa del Sol">
   <meta name="author" content="Marcos — digitaliza.marbella">
-  <link rel="canonical" href="https://digitaliza.marbella/">
-  <link rel="icon" type="image/svg+xml" href="../Fotos e Imágenes/logo-digitaliza-marbella-icono.svg">
+  <link rel="canonical" href="https://marcooshz-byte.github.io/digitalizamarbella/">
+  <link rel="icon" type="image/svg+xml" href="../assets/logo-digitaliza-marbella-icono.svg">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://digitaliza.marbella/">
+  <meta property="og:url" content="https://marcooshz-byte.github.io/digitalizamarbella/">
   <meta property="og:title" content="Digitaliza Marbella | Servicios digitales para negocios locales">
   <meta property="og:description" content="Web, menú QR, reseñas Google, SEO local y redes sociales para bares, restaurantes y negocios de Marbella. Consulta gratuita sin compromiso.">
-  <meta property="og:image" content="https://digitaliza.marbella/Fotos e Imágenes/logo-digitaliza-marbella.png">
+  <meta property="og:image" content="https://marcooshz-byte.github.io/digitalizamarbella/assets/logo-digitaliza-marbella.png">
   <meta property="og:locale" content="es_ES">
   <meta property="og:site_name" content="digitaliza.marbella">
 
@@ -24,12 +24,15 @@
   <meta name="twitter:site" content="@digitalizamarbella">
   <meta name="twitter:title" content="Digitaliza Marbella | Servicios digitales para negocios locales">
   <meta name="twitter:description" content="Web, menú QR, reseñas Google, SEO local y redes sociales para negocios de Marbella. Primera consulta gratis.">
-  <meta name="twitter:image" content="https://digitaliza.marbella/Fotos e Imágenes/logo-digitaliza-marbella.png">
+  <meta name="twitter:image" content="https://marcooshz-byte.github.io/digitalizamarbella/assets/logo-digitaliza-marbella.png">
 
   <!-- Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Preload imagen hero -->
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=640&q=85&auto=format&fit=crop" fetchpriority="high">
 
   <!-- JSON-LD LocalBusiness -->
   <script type="application/ld+json">
@@ -38,7 +41,7 @@
     "@type": "LocalBusiness",
     "name": "digitaliza.marbella",
     "description": "Servicios de digitalización para bares, restaurantes y negocios locales en Marbella y la Costa del Sol. Web profesional, menú QR, SEO local y gestión de redes sociales.",
-    "url": "https://digitaliza.marbella/",
+    "url": "https://marcooshz-byte.github.io/digitalizamarbella/",
     "telephone": "",
     "email": "mhztrabajos@gmail.com",
     "founder": { "@type": "Person", "name": "Marcos" },
@@ -97,6 +100,16 @@
       line-height: 1.6;
       overflow-x: hidden;
     }
+
+    /* ── SKIP LINK ── */
+    .skip-link {
+      position: absolute; top: -48px; left: 8px; z-index: 9999;
+      background: var(--blue); color: #fff;
+      padding: 8px 16px; border-radius: var(--radius-sm);
+      font-size: 14px; font-weight: 600; text-decoration: none;
+      transition: top .2s ease;
+    }
+    .skip-link:focus { top: 8px; }
 
     /* ── SCROLLBAR ── */
     ::-webkit-scrollbar { width: 6px; }
@@ -477,7 +490,7 @@
       padding: 3px 10px; border-radius: 20px;
     }
     .srv-price {
-      font-size: 12px; color: rgba(255,255,255,.35); font-weight: 500;
+      font-size: 12px; color: rgba(255,255,255,.62); font-weight: 500;
     }
 
     /* ══════════════════════════════
@@ -786,7 +799,7 @@
     }
     .f-logo { font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 14px; }
     .f-logo span { color: var(--orange); }
-    .f-desc { font-size: 13px; color: rgba(255,255,255,.38); line-height: 1.7; max-width: 240px; margin-bottom: 20px; }
+    .f-desc { font-size: 13px; color: rgba(255,255,255,.58); line-height: 1.7; max-width: 240px; margin-bottom: 20px; }
     .f-social { display: flex; gap: 10px; }
     .f-social-link {
       width: 36px; height: 36px;
@@ -807,11 +820,11 @@
 
     .f-col-title { font-size: 12px; font-weight: 700; letter-spacing: .08em; color: rgba(255,255,255,.35); text-transform: uppercase; margin-bottom: 18px; }
     .f-col-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-    .f-col-links a { font-size: 14px; color: rgba(255,255,255,.45); text-decoration: none; transition: color .2s; }
+    .f-col-links a { font-size: 14px; color: rgba(255,255,255,.65); text-decoration: none; transition: color .2s; }
     .f-col-links a:hover { color: #fff; }
     .f-contact-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; }
     .f-contact-ico { font-size: 15px; line-height: 1.4; }
-    .f-contact-txt { font-size: 13px; color: rgba(255,255,255,.4); line-height: 1.6; }
+    .f-contact-txt { font-size: 13px; color: rgba(255,255,255,.62); line-height: 1.6; }
     .f-contact-txt a { color: rgba(255,255,255,.65); text-decoration: none; transition: color .2s; }
     .f-contact-txt a:hover { color: #fff; }
 
@@ -820,7 +833,7 @@
       padding-top: 24px;
       display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;
     }
-    .f-copy { font-size: 12px; color: rgba(255,255,255,.2); }
+    .f-copy { font-size: 12px; color: rgba(255,255,255,.5); }
 
     /* ══════════════════════════════
        FADE IN
@@ -898,6 +911,8 @@
 </head>
 <body>
 
+<a href="#hero" class="skip-link">Saltar al contenido principal</a>
+
 <!-- NAV -->
 <nav id="nav" role="navigation" aria-label="Navegación principal">
   <a href="#" class="nav-logo" aria-label="Digitaliza Marbella — inicio">
@@ -915,12 +930,12 @@
     </svg>
     digitaliza<span>.marbella</span>
   </a>
-  <ul class="nav-links" id="navLinks" role="menubar">
-    <li role="none"><a href="#servicios" role="menuitem">Servicios</a></li>
-    <li role="none"><a href="#proceso" role="menuitem">Cómo funciona</a></li>
-    <li role="none"><a href="#porque" role="menuitem">Sobre mí</a></li>
-    <li role="none"><a href="#redes" role="menuitem">Redes sociales</a></li>
-    <li role="none"><a href="#contacto" class="nav-cta" role="menuitem">Contacto</a></li>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#proceso">Cómo funciona</a></li>
+    <li><a href="#porque">Sobre mí</a></li>
+    <li><a href="#redes">Redes sociales</a></li>
+    <li><a href="#contacto" class="nav-cta">Contacto</a></li>
   </ul>
   <button class="burger" id="burger" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="navLinks">
     <span></span><span></span><span></span>
@@ -961,7 +976,7 @@
            alt=""
            loading="eager"
            decoding="async"
-           width="640">
+           width="640" height="853">
       <div class="hero-photo-badge">
         <div class="hero-photo-badge-ico">⭐</div>
         <div class="hero-photo-badge-txt">
@@ -1074,21 +1089,21 @@
       <img
         src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=900&q=85&auto=format&fit=crop"
         alt="Terraza de restaurante con ambiente mediterráneo en la Costa del Sol"
-        loading="lazy" decoding="async" width="900">
+        loading="lazy" decoding="async" width="900" height="600">
       <div class="gallery-label">Restaurantes<span>Terrazas y comedores</span></div>
     </div>
     <div class="gallery-item">
       <img
         src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=900&q=85&auto=format&fit=crop"
         alt="Interior de bar con barra de cócteles iluminada"
-        loading="lazy" decoding="async" width="900">
+        loading="lazy" decoding="async" width="900" height="600">
       <div class="gallery-label">Bares y pubs<span>Coctelería y hostelería</span></div>
     </div>
     <div class="gallery-item">
       <img
         src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?w=900&q=85&auto=format&fit=crop"
         alt="Cafetería con ambiente acogedor y pastelería artesanal"
-        loading="lazy" decoding="async" width="900">
+        loading="lazy" decoding="async" width="900" height="600">
       <div class="gallery-label">Cafeterías y comercio<span>Tiendas y negocios locales</span></div>
     </div>
   </div>
@@ -1130,7 +1145,7 @@
   <img
     src="https://images.unsplash.com/photo-1499678329028-101435549a4e?w=1800&q=85&auto=format&fit=crop"
     alt=""
-    loading="lazy" decoding="async" width="1800">
+    loading="lazy" decoding="async" width="1800" height="1013">
   <div class="marbella-banner-inner">
     <h3>Tu negocio en Marbella,<br><em>visible para el mundo</em></h3>
     <p>Más de 11 millones de turistas visitan la Costa del Sol cada año. ¿Te encuentran a ti?</p>
@@ -1151,7 +1166,7 @@
              alt="Marcos trabajando en estrategia digital para negocios locales"
              loading="lazy"
              decoding="async"
-             width="600">
+             width="600" height="750">
       </div>
       <div class="pq-photo-caption">
         <strong>Marcos — digitaliza.marbella</strong>
@@ -1229,7 +1244,7 @@
       <img
         src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=600&q=85&auto=format&fit=crop"
         alt="Persona gestionando las redes sociales de su negocio desde el móvil"
-        loading="lazy" decoding="async" width="600">
+        loading="lazy" decoding="async" width="600" height="800">
     </div>
     <div class="fi">
       <div class="mock-phone" role="img" aria-label="Ejemplo de perfil de Instagram para un negocio de Marbella">
@@ -1259,7 +1274,7 @@
   <img
     src="https://images.unsplash.com/photo-1551218808-94e220e084d2?w=1800&q=85&auto=format&fit=crop"
     alt=""
-    loading="lazy" decoding="async" width="1800">
+    loading="lazy" decoding="async" width="1800" height="1013">
   <div class="marbella-banner-inner">
     <h3>Primera consulta <em>gratuita</em><br>y sin compromiso</h3>
     <p>Cuéntame qué tiene tu negocio y te digo exactamente qué podemos hacer juntos.</p>
@@ -1272,7 +1287,7 @@
     <img
       src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=80&auto=format&fit=crop"
       alt=""
-      loading="lazy" decoding="async" width="1800">
+      loading="lazy" decoding="async" width="1800" height="1200">
   </div>
   <div class="s-head s-head-center">
     <div class="s-tag fi">Contacto</div>
@@ -1283,6 +1298,11 @@
   <div class="contact-wrap">
     <div class="contact-form fi" id="contactForm">
       <form id="form" novalidate aria-label="Formulario de contacto">
+        <!-- Web3Forms: consigue tu API key gratuita en web3forms.com con tu email -->
+        <input type="hidden" name="access_key" value="7f0ea23a-f5f9-4485-9187-3268e2faf156">
+        <input type="hidden" name="subject" value="Consulta desde digitaliza.marbella">
+        <input type="hidden" name="from_name" value="digitaliza.marbella">
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
         <div class="form-row">
           <div class="form-group" id="grp-nombre">
             <label for="nombre">Tu nombre</label>
@@ -1506,32 +1526,31 @@
     });
   });
 
-  form.addEventListener('submit', e => {
+  form.addEventListener('submit', async e => {
     e.preventDefault();
     if (!validate()) return;
 
     btnSubmit.disabled = true;
     btnSubmit.textContent = 'Enviando…';
 
-    const nombre  = document.getElementById('nombre').value.trim();
-    const email   = document.getElementById('email').value.trim();
-    const negocio = document.getElementById('negocio').value;
-    const mensaje = document.getElementById('mensaje').value.trim();
-
-    const subject = encodeURIComponent('Consulta desde digitaliza.marbella — ' + nombre);
-    const body = encodeURIComponent(
-      'Nombre: ' + nombre + '\n' +
-      'Email: ' + email + '\n' +
-      'Tipo de negocio: ' + negocio + '\n\n' +
-      'Mensaje:\n' + mensaje
-    );
-
-    window.location.href = 'mailto:mhztrabajos@gmail.com?subject=' + subject + '&body=' + body;
-
-    setTimeout(() => {
-      form.style.display = 'none';
-      formSuccess.style.display = 'block';
-    }, 600);
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form)
+      });
+      const data = await res.json();
+      if (data.success) {
+        form.style.display = 'none';
+        formSuccess.style.display = 'block';
+      } else {
+        throw new Error(data.message || 'Error desconocido');
+      }
+    } catch {
+      btnSubmit.disabled = false;
+      btnSubmit.textContent = 'Enviar mensaje →';
+      alert('Ha ocurrido un error al enviar. Por favor, escríbenos directamente a mhztrabajos@gmail.com');
+    }
   });
 
 })();
