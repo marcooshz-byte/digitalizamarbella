@@ -1,0 +1,24 @@
+<svg viewBox="0 0 480 168" xmlns="http://www.w3.org/2000/svg">
+  <style>@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&amp;display=swap');</style>
+
+  <!-- Monograma D: celda 28px (cuadrado 20px + hueco 8px) -->
+  <!-- Fila 0 -->
+  <rect x="0"  y="18" width="20" height="20" rx="4" fill="#0ea5e9"/>
+  <rect x="28" y="18" width="20" height="20" rx="4" fill="#0ea5e9"/>
+  <!-- Fila 1 -->
+  <rect x="0"  y="46" width="20" height="20" rx="4" fill="#0284c7"/>
+  <rect x="56" y="46" width="20" height="20" rx="4" fill="#0284c7"/>
+  <!-- Fila 2 — acento naranja en el centro-derecha -->
+  <rect x="0"  y="74" width="20" height="20" rx="4" fill="#0369a1"/>
+  <rect x="56" y="74" width="20" height="20" rx="4" fill="#f97316"/>
+  <!-- Fila 3 -->
+  <rect x="0"  y="102" width="20" height="20" rx="4" fill="#0284c7"/>
+  <rect x="56" y="102" width="20" height="20" rx="4" fill="#0284c7"/>
+  <!-- Fila 4 -->
+  <rect x="0"  y="130" width="20" height="20" rx="4" fill="#0ea5e9"/>
+  <rect x="28" y="130" width="20" height="20" rx="4" fill="#0ea5e9"/>
+
+  <!-- Wordmark -->
+  <text x="104" y="86" font-family="'Space Grotesk', Inter, -apple-system, sans-serif" font-size="52" font-weight="700" fill="#0f172a">digitaliza</text>
+  <text x="104" y="128" font-family="'Space Grotesk', Inter, -apple-system, sans-serif" font-size="36" font-weight="400" fill="#64748b"><tspan fill="#0ea5e9">.</tspan>marbella</text>
+</svg>

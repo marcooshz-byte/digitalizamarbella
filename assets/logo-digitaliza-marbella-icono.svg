@@ -1,0 +1,20 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Icono cuadrado — para foto de perfil, favicon, app icon -->
+  <!-- Monograma D centrado en 100x100, celda 16px (11px + 5px hueco) -->
+
+  <!-- Fila 0 -->
+  <rect x="29" y="12" width="11" height="11" rx="3" fill="#0ea5e9"/>
+  <rect x="45" y="12" width="11" height="11" rx="3" fill="#0ea5e9"/>
+  <!-- Fila 1 -->
+  <rect x="29" y="28" width="11" height="11" rx="3" fill="#0284c7"/>
+  <rect x="61" y="28" width="11" height="11" rx="3" fill="#0284c7"/>
+  <!-- Fila 2 — acento naranja -->
+  <rect x="29" y="44" width="11" height="11" rx="3" fill="#0369a1"/>
+  <rect x="61" y="44" width="11" height="11" rx="3" fill="#f97316"/>
+  <!-- Fila 3 -->
+  <rect x="29" y="60" width="11" height="11" rx="3" fill="#0284c7"/>
+  <rect x="61" y="60" width="11" height="11" rx="3" fill="#0284c7"/>
+  <!-- Fila 4 -->
+  <rect x="29" y="76" width="11" height="11" rx="3" fill="#0ea5e9"/>
+  <rect x="45" y="76" width="11" height="11" rx="3" fill="#0ea5e9"/>
+</svg>
