@@ -171,7 +171,7 @@
     .nav-links.open {
       display: flex; flex-direction: column; align-items: flex-start;
       position: fixed; top: 64px; left: 0; right: 0;
-      background: rgba(10,15,30,.98);
+      background: rgba(10,15,30,1);
       backdrop-filter: blur(20px);
       padding: 20px 6% 28px; gap: 4px;
       border-top: 1px solid rgba(255,255,255,.06);
@@ -224,17 +224,17 @@
     .hero-tag {
       display: inline-flex; align-items: center; gap: 8px;
       font-size: 11px; letter-spacing: .12em; font-weight: 600;
-      color: var(--blue);
-      background: rgba(14,165,233,.12);
-      border: 1px solid rgba(14,165,233,.28);
+      color: #fff;
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.32);
       padding: 6px 14px; border-radius: 20px; margin-bottom: 28px;
     }
     .hero-tag::before {
       content: '';
       width: 6px; height: 6px;
-      background: var(--blue);
+      background: var(--orange);
       border-radius: 50%;
-      box-shadow: 0 0 0 3px rgba(14,165,233,.25);
+      box-shadow: 0 0 0 3px rgba(249,115,22,.3);
       animation: pulse-dot 2s infinite;
     }
     @keyframes pulse-dot {
@@ -860,6 +860,9 @@
 
     @media (max-width: 768px) {
       section { padding: 64px 5%; }
+      .hero-badges { flex-direction: column; gap: 10px; }
+      .badge { width: 100%; }
+      #hero { padding-bottom: 112px; }
       .nav-links { display: none; }
       .burger { display: block; }
       h1 { font-size: clamp(32px, 9vw, 44px); }
