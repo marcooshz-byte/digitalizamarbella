@@ -1009,36 +1009,39 @@
     }
     .ig-dot.active { background: var(--orange); transform: scale(1.3); }
 
-    .ig-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 6px;
-      border-radius: 16px;
+    .ig-marquee-wrap {
       overflow: hidden;
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 10%, #000 90%, transparent 100%);
+      mask-image: linear-gradient(to right, transparent 0%, #000 10%, #000 90%, transparent 100%);
+    }
+    .ig-track {
+      display: flex; gap: 12px;
+      width: max-content;
+      animation: igScroll 32s linear infinite;
+    }
+    .ig-marquee-wrap:hover .ig-track { animation-play-state: paused; }
+    @keyframes igScroll {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
     }
     .ig-tile {
-      position: relative; display: block;
-      aspect-ratio: 1; overflow: hidden;
-      text-decoration: none;
+      flex-shrink: 0; width: 200px;
+      aspect-ratio: 1; border-radius: 12px; overflow: hidden;
+      position: relative; display: block; text-decoration: none;
+      box-shadow: 0 4px 16px rgba(0,0,0,.1);
+      transition: box-shadow .3s;
     }
+    .ig-tile:hover { box-shadow: 0 8px 28px rgba(0,0,0,.18); }
     .ig-tile img {
-      width: 100%; height: 100%; object-fit: cover;
-      display: block; transition: transform .45s ease;
+      width: 100%; height: 100%; display: block;
+      object-fit: contain; background: #f4f4f0;
     }
-    .ig-tile:hover img { transform: scale(1.07); }
     .ig-tile-ov {
       position: absolute; inset: 0;
       background: rgba(0,0,0,0);
-      display: flex; align-items: center; justify-content: center;
       transition: background .3s;
     }
-    .ig-tile:hover .ig-tile-ov { background: rgba(0,0,0,.38); }
-    .ig-tile-ov svg {
-      width: 32px; height: 32px; fill: #fff;
-      opacity: 0; transform: scale(.8);
-      transition: opacity .3s, transform .3s;
-    }
-    .ig-tile:hover .ig-tile-ov svg { opacity: 1; transform: scale(1); }
+    .ig-tile:hover .ig-tile-ov { background: rgba(0,0,0,.25); }
 
     /* ══════════════════════════════
        ZONAS
@@ -1504,43 +1507,28 @@
     </a>
   </div>
 
-  <div class="ig-grid fi">
-    <a class="ig-tile" href="https://instagram.com/digitalizamarbella" target="_blank" rel="noopener noreferrer" aria-label="Ver en Instagram">
-      <img src="assets/ig/001_Navy_1_01.png" alt="Post Instagram Digitaliza Marbella" loading="lazy" decoding="async">
-      <div class="ig-tile-ov"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></div>
-    </a>
-    <a class="ig-tile" href="https://instagram.com/digitalizamarbella" target="_blank" rel="noopener noreferrer" aria-label="Ver en Instagram">
-      <img src="assets/ig/004_Crema_2_01.png" alt="Post Instagram Digitaliza Marbella" loading="lazy" decoding="async">
-      <div class="ig-tile-ov"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></div>
-    </a>
-    <a class="ig-tile" href="https://instagram.com/digitalizamarbella" target="_blank" rel="noopener noreferrer" aria-label="Ver en Instagram">
-      <img src="assets/ig/007_Azul_3_01.png" alt="Post Instagram Digitaliza Marbella" loading="lazy" decoding="async">
-      <div class="ig-tile-ov"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></div>
-    </a>
-    <a class="ig-tile" href="https://instagram.com/digitalizamarbella" target="_blank" rel="noopener noreferrer" aria-label="Ver en Instagram">
-      <img src="assets/ig/010_Morado_4_01.png" alt="Post Instagram Digitaliza Marbella" loading="lazy" decoding="async">
-      <div class="ig-tile-ov"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></div>
-    </a>
-    <a class="ig-tile" href="https://instagram.com/digitalizamarbella" target="_blank" rel="noopener noreferrer" aria-label="Ver en Instagram">
-      <img src="assets/ig/013_Grafito_5_01.png" alt="Post Instagram Digitaliza Marbella" loading="lazy" decoding="async">
-      <div class="ig-tile-ov"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></div>
-    </a>
-    <a class="ig-tile" href="https://instagram.com/digitalizamarbella" target="_blank" rel="noopener noreferrer" aria-label="Ver en Instagram">
-      <img src="assets/ig/016_Navy_1_04.png" alt="Post Instagram Digitaliza Marbella" loading="lazy" decoding="async">
-      <div class="ig-tile-ov"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></div>
-    </a>
-    <a class="ig-tile" href="https://instagram.com/digitalizamarbella" target="_blank" rel="noopener noreferrer" aria-label="Ver en Instagram">
-      <img src="assets/ig/019_Crema_2_04.png" alt="Post Instagram Digitaliza Marbella" loading="lazy" decoding="async">
-      <div class="ig-tile-ov"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></div>
-    </a>
-    <a class="ig-tile" href="https://instagram.com/digitalizamarbella" target="_blank" rel="noopener noreferrer" aria-label="Ver en Instagram">
-      <img src="assets/ig/022_Azul_3_04.png" alt="Post Instagram Digitaliza Marbella" loading="lazy" decoding="async">
-      <div class="ig-tile-ov"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></div>
-    </a>
-    <a class="ig-tile" href="https://instagram.com/digitalizamarbella" target="_blank" rel="noopener noreferrer" aria-label="Ver en Instagram">
-      <img src="assets/ig/025_Morado_4_04.png" alt="Post Instagram Digitaliza Marbella" loading="lazy" decoding="async">
-      <div class="ig-tile-ov"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></div>
-    </a>
+  <div class="ig-marquee-wrap fi">
+    <div class="ig-track">
+      <a class="ig-tile" href="https://instagram.com/digitalizamarbella" target="_blank" rel="noopener noreferrer" aria-label="Ver en Instagram"><img src="assets/ig/001_Navy_1_01.png" alt="Post Digitaliza Marbella" loading="lazy" decoding="async"><div class="ig-tile-ov"></div></a>
+      <a class="ig-tile" href="https://instagram.com/digitalizamarbella" target="_blank" rel="noopener noreferrer" aria-label="Ver en Instagram"><img src="assets/ig/004_Crema_2_01.png" alt="Post Digitaliza Marbella" loading="lazy" decoding="async"><div class="ig-tile-ov"></div></a>
+      <a class="ig-tile" href="https://instagram.com/digitalizamarbella" target="_blank" rel="noopener noreferrer" aria-label="Ver en Instagram"><img src="assets/ig/007_Azul_3_01.png" alt="Post Digitaliza Marbella" loading="lazy" decoding="async"><div class="ig-tile-ov"></div></a>
+      <a class="ig-tile" href="https://instagram.com/digitalizamarbella" target="_blank" rel="noopener noreferrer" aria-label="Ver en Instagram"><img src="assets/ig/010_Morado_4_01.png" alt="Post Digitaliza Marbella" loading="lazy" decoding="async"><div class="ig-tile-ov"></div></a>
+      <a class="ig-tile" href="https://instagram.com/digitalizamarbella" target="_blank" rel="noopener noreferrer" aria-label="Ver en Instagram"><img src="assets/ig/013_Grafito_5_01.png" alt="Post Digitaliza Marbella" loading="lazy" decoding="async"><div class="ig-tile-ov"></div></a>
+      <a class="ig-tile" href="https://instagram.com/digitalizamarbella" target="_blank" rel="noopener noreferrer" aria-label="Ver en Instagram"><img src="assets/ig/016_Navy_1_04.png" alt="Post Digitaliza Marbella" loading="lazy" decoding="async"><div class="ig-tile-ov"></div></a>
+      <a class="ig-tile" href="https://instagram.com/digitalizamarbella" target="_blank" rel="noopener noreferrer" aria-label="Ver en Instagram"><img src="assets/ig/019_Crema_2_04.png" alt="Post Digitaliza Marbella" loading="lazy" decoding="async"><div class="ig-tile-ov"></div></a>
+      <a class="ig-tile" href="https://instagram.com/digitalizamarbella" target="_blank" rel="noopener noreferrer" aria-label="Ver en Instagram"><img src="assets/ig/022_Azul_3_04.png" alt="Post Digitaliza Marbella" loading="lazy" decoding="async"><div class="ig-tile-ov"></div></a>
+      <a class="ig-tile" href="https://instagram.com/digitalizamarbella" target="_blank" rel="noopener noreferrer" aria-label="Ver en Instagram"><img src="assets/ig/025_Morado_4_04.png" alt="Post Digitaliza Marbella" loading="lazy" decoding="async"><div class="ig-tile-ov"></div></a>
+      <!-- duplicado para loop infinito -->
+      <a class="ig-tile" href="https://instagram.com/digitalizamarbella" target="_blank" rel="noopener noreferrer" aria-label="Ver en Instagram"><img src="assets/ig/001_Navy_1_01.png" alt="Post Digitaliza Marbella" loading="lazy" decoding="async"><div class="ig-tile-ov"></div></a>
+      <a class="ig-tile" href="https://instagram.com/digitalizamarbella" target="_blank" rel="noopener noreferrer" aria-label="Ver en Instagram"><img src="assets/ig/004_Crema_2_01.png" alt="Post Digitaliza Marbella" loading="lazy" decoding="async"><div class="ig-tile-ov"></div></a>
+      <a class="ig-tile" href="https://instagram.com/digitalizamarbella" target="_blank" rel="noopener noreferrer" aria-label="Ver en Instagram"><img src="assets/ig/007_Azul_3_01.png" alt="Post Digitaliza Marbella" loading="lazy" decoding="async"><div class="ig-tile-ov"></div></a>
+      <a class="ig-tile" href="https://instagram.com/digitalizamarbella" target="_blank" rel="noopener noreferrer" aria-label="Ver en Instagram"><img src="assets/ig/010_Morado_4_01.png" alt="Post Digitaliza Marbella" loading="lazy" decoding="async"><div class="ig-tile-ov"></div></a>
+      <a class="ig-tile" href="https://instagram.com/digitalizamarbella" target="_blank" rel="noopener noreferrer" aria-label="Ver en Instagram"><img src="assets/ig/013_Grafito_5_01.png" alt="Post Digitaliza Marbella" loading="lazy" decoding="async"><div class="ig-tile-ov"></div></a>
+      <a class="ig-tile" href="https://instagram.com/digitalizamarbella" target="_blank" rel="noopener noreferrer" aria-label="Ver en Instagram"><img src="assets/ig/016_Navy_1_04.png" alt="Post Digitaliza Marbella" loading="lazy" decoding="async"><div class="ig-tile-ov"></div></a>
+      <a class="ig-tile" href="https://instagram.com/digitalizamarbella" target="_blank" rel="noopener noreferrer" aria-label="Ver en Instagram"><img src="assets/ig/019_Crema_2_04.png" alt="Post Digitaliza Marbella" loading="lazy" decoding="async"><div class="ig-tile-ov"></div></a>
+      <a class="ig-tile" href="https://instagram.com/digitalizamarbella" target="_blank" rel="noopener noreferrer" aria-label="Ver en Instagram"><img src="assets/ig/022_Azul_3_04.png" alt="Post Digitaliza Marbella" loading="lazy" decoding="async"><div class="ig-tile-ov"></div></a>
+      <a class="ig-tile" href="https://instagram.com/digitalizamarbella" target="_blank" rel="noopener noreferrer" aria-label="Ver en Instagram"><img src="assets/ig/025_Morado_4_04.png" alt="Post Digitaliza Marbella" loading="lazy" decoding="async"><div class="ig-tile-ov"></div></a>
+    </div>
   </div>
 </section>
 
