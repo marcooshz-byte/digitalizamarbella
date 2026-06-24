@@ -1473,60 +1473,10 @@
     </a>
   </div>
 
-  <div class="ig-carousel-wrap fi">
-    <button class="ig-nav-btn ig-nav-prev" id="igPrev" aria-label="Anterior">&#8249;</button>
-    <div class="ig-carousel" id="igCarousel" role="list">
-
-      <a class="ig-post" href="https://instagram.com/digitaliza.marbella" target="_blank" rel="noopener noreferrer" role="listitem" aria-label="Ver publicación en Instagram">
-        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&q=92&auto=format&fit=crop" alt="" loading="lazy" decoding="async">
-        <div class="ig-post-overlay"><div class="ig-post-overlay-ico">♥</div><div class="ig-post-overlay-txt">Ver en Instagram</div></div>
-      </a>
-
-      <a class="ig-post" href="https://instagram.com/digitaliza.marbella" target="_blank" rel="noopener noreferrer" role="listitem" aria-label="Ver publicación en Instagram">
-        <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&q=92&auto=format&fit=crop" alt="" loading="lazy" decoding="async">
-        <div class="ig-post-overlay"><div class="ig-post-overlay-ico">♥</div><div class="ig-post-overlay-txt">Ver en Instagram</div></div>
-      </a>
-
-      <a class="ig-post" href="https://instagram.com/digitaliza.marbella" target="_blank" rel="noopener noreferrer" role="listitem" aria-label="Ver publicación en Instagram">
-        <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=600&q=92&auto=format&fit=crop" alt="" loading="lazy" decoding="async">
-        <div class="ig-post-overlay"><div class="ig-post-overlay-ico">♥</div><div class="ig-post-overlay-txt">Ver en Instagram</div></div>
-      </a>
-
-      <a class="ig-post" href="https://instagram.com/digitaliza.marbella" target="_blank" rel="noopener noreferrer" role="listitem" aria-label="Ver publicación en Instagram">
-        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=92&auto=format&fit=crop" alt="" loading="lazy" decoding="async">
-        <div class="ig-post-overlay"><div class="ig-post-overlay-ico">♥</div><div class="ig-post-overlay-txt">Ver en Instagram</div></div>
-      </a>
-
-      <a class="ig-post" href="https://instagram.com/digitaliza.marbella" target="_blank" rel="noopener noreferrer" role="listitem" aria-label="Ver publicación en Instagram">
-        <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?w=600&q=92&auto=format&fit=crop" alt="" loading="lazy" decoding="async">
-        <div class="ig-post-overlay"><div class="ig-post-overlay-ico">♥</div><div class="ig-post-overlay-txt">Ver en Instagram</div></div>
-      </a>
-
-      <a class="ig-post" href="https://instagram.com/digitaliza.marbella" target="_blank" rel="noopener noreferrer" role="listitem" aria-label="Ver publicación en Instagram">
-        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&q=92&auto=format&fit=crop" alt="" loading="lazy" decoding="async">
-        <div class="ig-post-overlay"><div class="ig-post-overlay-ico">♥</div><div class="ig-post-overlay-txt">Ver en Instagram</div></div>
-      </a>
-
-      <a class="ig-post" href="https://instagram.com/digitaliza.marbella" target="_blank" rel="noopener noreferrer" role="listitem" aria-label="Ver publicación en Instagram">
-        <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?w=600&q=92&auto=format&fit=crop" alt="" loading="lazy" decoding="async">
-        <div class="ig-post-overlay"><div class="ig-post-overlay-ico">♥</div><div class="ig-post-overlay-txt">Ver en Instagram</div></div>
-      </a>
-
-      <a class="ig-post" href="https://instagram.com/digitaliza.marbella" target="_blank" rel="noopener noreferrer" role="listitem" aria-label="Ver publicación en Instagram">
-        <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=600&q=92&auto=format&fit=crop" alt="" loading="lazy" decoding="async">
-        <div class="ig-post-overlay"><div class="ig-post-overlay-ico">♥</div><div class="ig-post-overlay-txt">Ver en Instagram</div></div>
-      </a>
-
-      <a class="ig-post" href="https://instagram.com/digitaliza.marbella" target="_blank" rel="noopener noreferrer" role="listitem" aria-label="Ver publicación en Instagram">
-        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=92&auto=format&fit=crop" alt="" loading="lazy" decoding="async">
-        <div class="ig-post-overlay"><div class="ig-post-overlay-ico">♥</div><div class="ig-post-overlay-txt">Ver en Instagram</div></div>
-      </a>
-
-    </div>
-    <button class="ig-nav-btn ig-nav-next" id="igNext" aria-label="Siguiente">&#8250;</button>
+  <div class="fi" style="border-radius:16px;overflow:hidden;margin-top:8px">
+    <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+    <iframe src="https://lightwidget.com/widgets/de5c226b016f5f89a7c0a130e07588ab.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;" title="Feed de Instagram @digitalizamarbella"></iframe>
   </div>
-
-  <div class="ig-dots" id="igDots" aria-hidden="true"></div>
 </section>
 
 <!-- BANNER NOCHE -->
@@ -1823,37 +1773,6 @@
     }
   });
 
-  /* ── Instagram carousel ── */
-  const igCarousel = document.getElementById('igCarousel');
-  const igPrev     = document.getElementById('igPrev');
-  const igNext     = document.getElementById('igNext');
-  const igDotsWrap = document.getElementById('igDots');
-
-  if (igCarousel && igPrev && igNext) {
-    const posts = igCarousel.querySelectorAll('.ig-post');
-    const scrollStep = () => igCarousel.querySelector('.ig-post').offsetWidth + 10;
-
-    /* Dots */
-    posts.forEach((_, i) => {
-      const d = document.createElement('button');
-      d.className = 'ig-dot' + (i === 0 ? ' active' : '');
-      d.addEventListener('click', () => {
-        igCarousel.scrollTo({ left: i * scrollStep(), behavior: 'smooth' });
-      });
-      igDotsWrap.appendChild(d);
-    });
-
-    function updateDots() {
-      const idx = Math.round(igCarousel.scrollLeft / scrollStep());
-      igDotsWrap.querySelectorAll('.ig-dot').forEach((d, i) => {
-        d.classList.toggle('active', i === idx);
-      });
-    }
-
-    igCarousel.addEventListener('scroll', updateDots, { passive: true });
-    igPrev.addEventListener('click', () => igCarousel.scrollBy({ left: -scrollStep() * 3, behavior: 'smooth' }));
-    igNext.addEventListener('click', () => igCarousel.scrollBy({ left:  scrollStep() * 3, behavior: 'smooth' }));
-  }
 
 })();
 </script>
